@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mini Alexa</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI VIRTUAL ASSISTANT - Mini Alexa</h1>
+    
+    <a href="/">
+    <button>Logout</button>
+    </a>
+
+    <input type="text"
+           id="message"
+           placeholder="Ask something...">
+
+    <!-- SEND BUTTON -->
+    <button onclick="sendMessage()">
+        Send
+    </button>
+
+    <!-- ADD THIS BELOW -->
+    <button onclick="startVoice()">
+        🎤 Speak
+    </button>
+
+    <div id="chatbox"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
